@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客, Hexo">
+    <meta name="keywords" content="你不知道的Javascript学习, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客 | Hexo</title>
+    <title>你不知道的Javascript学习 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -315,7 +315,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客</h1>
+                    <h1 class="description center-align post-title">你不知道的Javascript学习</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-30
+                    2022-03-31
                 </div>
                 
 
@@ -464,7 +464,32 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="第一章学习"><a href="#第一章学习" class="headerlink" title="第一章学习"></a>第一章学习</h1><p>见名知意，“L”和“R”的含义，它们分别代表左侧和右侧。</p>
+<p>这里举一个简单的例子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a)</span><br></pre></td></tr></table></figure>
+
+<p>在这段代码中，a就是进行RHS查询，因为我们并没有对a进行赋值操作，而是直接引用了a，我们需要查找并拿到a的值才能传递给<code>console.log</code><br>如果<code>a=2</code>，这里对 a 的引用则是 LHS 引用。</p>
+<p>LHS 和 RHS 的含义是“赋值操作的左侧或右侧”并不一定意味着就是“&#x3D; 赋值操作符的左侧或右侧”。说白了就是变量出现在复制操作的左边是进行LHS查询，出现在右边就是进行RHS查询。</p>
+<p>再例如</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params">a</span>)&#123;  </span><br><span class="line">    <span class="keyword">var</span> b = a;  </span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> c = <span class="title function_">foo</span>( <span class="number">2</span> );</span><br></pre></td></tr></table></figure>
+
+<p>其中LHS查询有三处，RHS有四处。<br>分别是</p>
+<ul>
+<li>LHS<ul>
+<li>c&#x3D; …</li>
+<li>a&#x3D;2; 这一个LHS其实是一个隐式查询</li>
+<li>b&#x3D;…</li>
+</ul>
+</li>
+<li>RHS<ul>
+<li>foo(2..</li>
+<li>&#x3D; a;</li>
+<li>return a;</li>
+<li>return b;</li>
+</ul>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -490,7 +515,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/03/30/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">http://example.com/2022/03/30/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="http://example.com/2022/03/31/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Javas%E5%AD%A6%E4%B9%A0/">http://example.com/2022/03/31/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Javas%E5%AD%A6%E4%B9%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -695,9 +720,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/31/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84Javas%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
@@ -715,9 +741,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -726,6 +752,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -736,13 +763,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/30/hello-world/">
+                <a href="/2022/03/30/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="我的第一篇博客">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">我的第一篇博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
